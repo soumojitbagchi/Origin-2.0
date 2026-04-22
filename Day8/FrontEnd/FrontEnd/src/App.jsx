@@ -16,7 +16,7 @@ function App() {
 
   const deleteNode = (idx, id) => {
     axios
-      .delete(`http://localhost:3000/api/notes/${id}`)
+      .delete(`https://day-8-zqdh.onrender.com/api/notes/${id}`)
       .then(() => {
         console.log(`note ${id} deleted successfully`);
         setNotes(Notes.filter((note) => note._id !== id));
@@ -30,7 +30,7 @@ function App() {
       remarks: Remarks,
     };
 
-    axios.post("http://localhost:3000/api/notes", newNote).then(() => {
+    axios.post("https://day-8-zqdh.onrender.com/api/notes", newNote).then(() => {
       console.log("data send sucessfully");
       setNotes([...Notes, newNote]);
       setTitle("");
